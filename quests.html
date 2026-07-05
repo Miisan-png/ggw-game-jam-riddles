@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#9fdcf2" />
-  <title>APU Great Game Week 2026</title>
+  <title>Great Game Week Quest Book Riddles</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -35,11 +35,13 @@
     <span class="tuft tuft-5">🌼</span>
   </div>
 
+  <a class="back-link" href="index.html"><span>🏝️</span> Back to the square</a>
+
   <header class="hero">
     <div class="sign">
       <span class="sign-leaf">🍃</span>
       <span class="sign-clock">🕒</span>
-      <h1 class="sign-title">APU<br /><span class="sign-title-big">Great Game Week</span></h1>
+      <h1 class="sign-title">Great Game Week<br /><span class="sign-title-big">Quest Book Riddles</span></h1>
       <span class="sign-bolt sign-bolt-l"></span>
       <span class="sign-bolt sign-bolt-r"></span>
     </div>
@@ -48,31 +50,20 @@
       <span class="tag tag-place">📍 APU Campus &middot; Level 3</span>
     </div>
     <div class="bubble">
-      <p class="hero-sub">Ooh, a visitor! Which book will you open today, hm? <b>Pick one below!</b></p>
+      <p class="hero-sub">Solve the riddles given by the <b>GGW</b> booth and collect extra stamps!</p>
     </div>
   </header>
 
-  <main class="choices">
-    <a class="choice choice-quest" href="quests.html">
-      <span class="choice-icon">🗺️</span>
-      <span class="choice-title">Quest Book<br />Riddles</span>
-      <span class="choice-desc">Crack a fresh riddle each day, hunt down the spot, and stamp your card at the GGW booth.</span>
-      <span class="choice-cta">Open the book ➜</span>
-    </a>
-    <a class="choice choice-hand" href="handbook.html">
-      <span class="choice-icon">📖</span>
-      <span class="choice-title">E-Handbook</span>
-      <span class="choice-desc">Your full festival guide &mdash; every event, day, and time, at a glance and in detail.</span>
-      <span class="choice-cta">Open the book ➜</span>
-    </a>
-  </main>
+  <main class="board" id="board"></main>
 
   <footer class="footer">
     <div class="footer-tip">
       <span class="footer-villager">🐱</span>
-      <p>Three clubs, three days, one big celebration of games, yes-yes!</p>
+      <p>A new riddle unlocks each day of the festival, yes-yes! Come back daily!</p>
     </div>
     <div class="footer-logos">🌿 🐾 🎲 🎮</div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
