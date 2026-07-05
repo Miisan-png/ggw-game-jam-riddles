@@ -257,6 +257,40 @@ body {
   z-index: 1;
 }
 
+.howto {
+  max-width: 880px;
+  margin: 34px auto 0;
+  padding: 0 22px;
+  position: relative;
+  z-index: 1;
+}
+.howto .card { padding: 46px 32px 30px; }
+
+.steps {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.steps li { display: flex; gap: 12px; align-items: flex-start; }
+.steps p { font-weight: 600; font-size: 15px; color: #5a4836; line-height: 1.45; }
+.steps b { color: var(--ink); }
+
+.step-num {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  border: 3px solid #fff;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 3px 0 #00000015;
+}
+
 .card {
   --scallop: 13px;
   position: relative;
@@ -706,6 +740,74 @@ body {
   white-space: nowrap;
 }
 
+.talks { flex-basis: 100%; margin-left: 28px; }
+
+.talks summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--ink);
+  background: var(--gold);
+  border: 3px solid #ffffffaa;
+  border-radius: 999px;
+  padding: 7px 16px;
+  box-shadow: 0 4px 0 #00000015;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+.talks summary:hover { transform: translateY(-2px) rotate(-1deg); }
+.talks summary::-webkit-details-marker { display: none; }
+
+.talks-arrow { font-size: 11px; transition: transform 0.25s ease; }
+.talks[open] .talks-arrow { transform: rotate(180deg); }
+
+.talk-list {
+  list-style: none;
+  margin-top: 12px;
+  background: #fffaf0;
+  border: 3px dashed var(--cream-edge);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 12px;
+  animation: pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+.talk { display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.talk + .talk { border-top: 3px dashed #f3e9d2; padding-top: 12px; }
+
+.talk-time {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+  background: var(--gold-deep);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 2px solid #ffffff88;
+  box-shadow: 0 3px 0 #00000012;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.talk-info { flex: 1; min-width: 180px; }
+.talk-info b { font-size: 15px; color: #5a4836; }
+.talk-studio {
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--pink-deep);
+}
+.talk-info p { margin-top: 2px; font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+
 .host {
   margin-top: 18px;
   font-size: 13px;
@@ -788,6 +890,10 @@ body {
   .tl-dot { margin-top: 5px; }
   .tl-name { min-width: 160px; font-size: 16px; }
   .tl-time { margin-left: 28px; font-size: 13px; }
+  .talks { margin-left: 0; }
+  .talk-list { padding: 12px; }
+  .talk-info b { font-size: 14px; }
+  .talk-studio { display: block; margin-left: 0; margin-top: 1px; }
   .footer { margin-top: 38px; }
   .footer-tip { font-size: 14px; padding: 11px 16px; gap: 8px; }
   .footer-villager { font-size: 24px; }

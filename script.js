@@ -4,6 +4,7 @@
   var RIDDLES = [
     {
       id: 1,
+      hint: "Found the spot? Take a good look around — the booth crew will ask you one small detail about it before the stamp is yours!",
       day: 1,
       unlock: new Date(2026, 6, 7, 0, 0, 0),
       badge: "☕",
@@ -17,6 +18,7 @@
     },
     {
       id: 2,
+      hint: "Found the spot? Take a good look around — the booth crew will ask you one small detail about it before the stamp is yours!",
       day: 2,
       unlock: new Date(2026, 6, 8, 0, 0, 0),
       badge: "🎶",
@@ -30,6 +32,7 @@
     },
     {
       id: 3,
+      hint: "Found the spot? Snap a photo of yourself there (Dodo wave encouraged!), post it to your story and tag the GGW page — show us the post at the booth for your stamp!",
       day: 3,
       unlock: new Date(2026, 6, 9, 0, 0, 0),
       badge: "✈️",
@@ -39,6 +42,20 @@
         "This gateway is where your long journeys overlap.",
         "It's the very first acre your passport will show,",
         "Where the newcomers arrive and the travelers go."
+      ]
+    },
+    {
+      id: 4,
+      hint: "No detail quiz for this one — squeezing into the giant Switch and snapping a photo IS your proof. Show it at the booth!",
+      day: 3,
+      unlock: new Date(2026, 6, 9, 0, 0, 0),
+      badge: "📸",
+      title: "Step Into the Switch",
+      lines: [
+        "The magic machine where our island resides,",
+        "Has one blue, one red Joy-Con clipped to its sides.",
+        "We built it SO big that a villager fits —",
+        "Stand in the screen, say \"CHEESE!\", and that's it!"
       ]
     }
   ];
@@ -80,7 +97,7 @@
     });
     card.appendChild(list);
 
-    card.appendChild(el("div", "hint", "Solve it, find the spot, then strike your pose at the GGW booth to claim your stamp!"));
+    card.appendChild(el("div", "hint", riddle.hint));
 
     return card;
   }
@@ -116,8 +133,10 @@
   var board = document.getElementById("board");
   var lockedCards = [];
 
+  var forceUnlock = false;
+
   RIDDLES.forEach(function (riddle) {
-    var unlocked = Date.now() >= riddle.unlock.getTime();
+    var unlocked = forceUnlock || Date.now() >= riddle.unlock.getTime();
     var card = unlocked ? buildUnlocked(riddle) : buildLocked(riddle);
     board.appendChild(card);
     if (!unlocked) lockedCards.push(card);
