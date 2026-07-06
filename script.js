@@ -4,7 +4,8 @@
   var RIDDLES = [
     {
       id: 1,
-      hint: "Found the spot? Take a good look around — the booth crew will ask you one small detail about it before the stamp is yours!",
+      hint: "Go to the spot and take a good look around — remember the little details!",
+      booth: "At the booth: say the NAME of the place, then answer one small detail question about it. Nail it and the stamp is yours!",
       day: 1,
       unlock: new Date(2026, 6, 7, 0, 0, 0),
       badge: "☕",
@@ -18,7 +19,8 @@
     },
     {
       id: 2,
-      hint: "Found the spot? Take a good look around — the booth crew will ask you one small detail about it before the stamp is yours!",
+      hint: "Go to the spot and take a good look around — remember the little details!",
+      booth: "At the booth: say the NAME of the place, then answer one small detail question about it. Nail it and the stamp is yours!",
       day: 2,
       unlock: new Date(2026, 6, 8, 0, 0, 0),
       badge: "🎶",
@@ -32,7 +34,8 @@
     },
     {
       id: 3,
-      hint: "Found the spot? Snap a photo of yourself there (Dodo wave encouraged!), post it to your story and tag the GGW page — show us the post at the booth for your stamp!",
+      hint: "Snap a photo of yourself at the spot (Dodo wave encouraged!), post it to your story and tag the GGW page.",
+      booth: "At the booth: say the NAME of the place and show us your tagged story. Stamp!",
       day: 3,
       unlock: new Date(2026, 6, 9, 0, 0, 0),
       badge: "✈️",
@@ -46,7 +49,8 @@
     },
     {
       id: 4,
-      hint: "No detail quiz for this one — squeezing into the giant Switch and snapping a photo IS your proof. Show it at the booth!",
+      hint: "Squeeze into the frame with your friends and snap that photo!",
+      booth: "At the booth: just show us your photo booth shot — no quiz for this one. Stamp!",
       day: 3,
       unlock: new Date(2026, 6, 9, 0, 0, 0),
       badge: "📸",
@@ -98,6 +102,7 @@
     card.appendChild(list);
 
     card.appendChild(el("div", "hint", riddle.hint));
+    card.appendChild(el("div", "say", riddle.booth));
 
     return card;
   }

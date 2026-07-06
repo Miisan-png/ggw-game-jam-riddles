@@ -398,7 +398,7 @@ body {
   opacity: 0.7;
 }
 
-.hint {
+.hint, .say {
   margin-top: 20px;
   font-size: 14px;
   font-weight: 600;
@@ -409,6 +409,8 @@ body {
   padding: 12px 16px;
 }
 .hint::before { content: "💡 "; }
+.say { margin-top: 10px; color: var(--ink); border-color: #bfe3e5; background: #f4fbfb; }
+.say::before { content: "🗣️ "; }
 
 .card.locked { background: repeating-linear-gradient(135deg, #efe7d6 0 18px, #e9e0cb 18px 36px); }
 .card.locked::after { border-color: #d8caac; }
@@ -878,7 +880,7 @@ body {
   .card-badge { width: 48px; height: 48px; font-size: 22px; }
   .riddle-lines li { font-size: 16px; }
   .event-list li { font-size: 15px; }
-  .hint { font-size: 13px; }
+  .hint, .say { font-size: 13px; }
   .cd-unit { min-width: 54px; padding: 8px 9px; }
   .cd-num { font-size: 22px; }
   .palm { font-size: 64px; }
